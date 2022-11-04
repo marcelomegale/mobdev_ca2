@@ -18,7 +18,12 @@ const routes: Routes = [
           {
             path: ':id',
             loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-          },
+          }
+        ]
+      },
+      {
+          path: 'spaceships',
+          children: [
           {
             path: '',
             loadChildren: () => import('../spaceships/spaceships.module').then( m => m.SpaceshipsPageModule)
@@ -26,7 +31,12 @@ const routes: Routes = [
           {
             path: ':id',
             loadChildren: () => import('../spaceship-details/spaceship-details.module').then( m => m.SpaceshipDetailsPageModule)
-          },
+          }
+        ]
+      },
+      {
+          path: 'species',
+          children: [
           {
             path: '',
             loadChildren: () => import('../species/species.module').then( m => m.SpeciesPageModule)
@@ -37,6 +47,7 @@ const routes: Routes = [
           }
         ]
       }
+      
     ]
   },
   {
