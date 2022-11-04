@@ -6,7 +6,7 @@
 
 <ion-content class="ion-padding">
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let species of (species | async)?.results" (click)="openDetails(film)">
+    <ion-item button detail lines="inset" *ngFor="let species of (species | async)?.results" (click)="openDetails(species)">
       {{ species.name }}
     </ion-item>
   </ion-list>
