@@ -10,18 +10,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SpeciesPage implements OnInit {
 
-  films: Observable<any>;
+  species: Observable<any>;
  
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
-    this.films = this.http.get('https://swapi.dev/api/species');
+    this.species = this.http.get('https://swapi.dev/api/species');
   }
  
-  openDetails(film) {
-    let split = film.url.split('/');
-    let filmId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/species/${filmId}`);
+  openDetails(species) {
+    let split = species.url.split('/');
+    let speciesId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/species/${speciesId}`);
   }
 
 }
