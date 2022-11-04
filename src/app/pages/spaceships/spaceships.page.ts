@@ -15,7 +15,7 @@ export class SpaceshipsPage implements OnInit {
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
-    this.spaceships = this.http.get('https://swapi.dev/api/spaceships');
+    this.spaceships = this.http.get('https://swapi.dev/api/starships');
   }
  
   openDetails(spaceships) {
